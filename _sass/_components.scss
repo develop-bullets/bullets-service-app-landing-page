@@ -102,37 +102,11 @@
   border-color: var(--app-accent);
 }
 
-/* Pilmie's amber is all but identical to Cineepp's, so it is separated by
-   surface rather than by hue — a cream card among dark ones. Its own brand
-   colour is left untouched. */
-.app-card--paper {
-  background: var(--paper);
-  border-color: transparent;
-  color: var(--paper-ink);
-}
-
-.app-card--paper .app-card__summary {
-  color: var(--paper-muted);
-}
-
-.app-card--paper .chip {
-  border-color: var(--paper-line);
-  color: var(--paper-muted);
-}
-
-.app-card--paper .app-card__more {
-  color: var(--paper-ink);
-}
-
 .app-card__icon {
   width: 76px;
   height: 76px;
   border-radius: 22.37%; /* the iOS squircle ratio */
   border: 1px solid var(--line);
-}
-
-.app-card--paper .app-card__icon {
-  border-color: var(--paper-line);
 }
 
 /* Stacked, not inline: a wrapping tagline made some cards two lines and others
@@ -152,10 +126,6 @@
   font-size: 0.875rem;
   color: var(--app-accent);
   font-weight: 550;
-}
-
-.app-card--paper .app-card__tagline {
-  color: #b57a10; /* the brand amber, darkened for AA contrast on cream */
 }
 
 .app-card__summary {

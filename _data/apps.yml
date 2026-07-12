@@ -90,10 +90,14 @@
   summary: "Log your reading, build streaks, and share book reviews with fellow readers."
   lead: "Pilmie is a cozy home for everything you read. Search for any book, keep a personal reading log, and share honest reviews with a community of readers who love books as much as you do."
 
-  accent: "#F4AA2B"
-  accent_soft: "#FFC978"
-  accent_ink: "#3A2E24"
-  surface: paper
+  # The app's own seed colour is an amber (#F4AA2B) all but identical to
+  # Cineepp's (hue 38 vs 42), which made the two cards read as one colour side
+  # by side. This rose is drawn from the icon mascot's pink but pushed redder
+  # (hue 343) so it also clears Drawwii (329) and Unrearix (325).
+  accent: "#E8557F"
+  accent_soft: "#F2839F"
+  accent_ink: "#2B0A16"
+  surface: dark
 
   ios_id: "6749807731"
   appstore_url: "https://apps.apple.com/app/id6749807731"
