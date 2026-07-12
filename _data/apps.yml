@@ -16,15 +16,21 @@
 #   cineepp  : the TMDB attribution below is required by the TMDB API terms.
 #   unrearix : only 5 of 48 songs are bundled for in-app playback. Never imply
 #              unlimited or full streaming (App Store Guideline 4.2.2).
-#   pilmie   : requires social sign-in. Never give it a "No account" chip.
-#   drawwii  : say "290+" templates (293 internally) and keep the on-device /
-#              never-uploaded promise explicit.
+#   pilmie   : requires social sign-in. Never claim it is account-free.
+#   drawwii  : say "290+" templates (293 internally).
+#
+# ⚠ NO PRIVACY CLAIMS. Do not promise here how an app handles data — no "never
+#   uploaded", no "nothing leaves your device", no account-free guarantees.
+#   Those are commitments, and the place to make them is each app's privacy
+#   policy, which is linked from its page. Describe what a feature does
+#   ("edits run on the phone, so it works offline"), not what we swear never
+#   to do with it.
 
 - slug: cineepp
   name: Cineepp
   tagline: "Watchlist & smart taste picks"
   summary: "Browse movies and TV, swipe trending trailers, build a watchlist, and get taste-based picks."
-  lead: "Cineepp is your all-in-one home for movies and TV — discover what to watch, swipe through trending trailers, save your picks and explore your viewing taste. No account, no sign-up, completely free."
+  lead: "Cineepp is your all-in-one home for movies and TV — discover what to watch, swipe through trending trailers, save your picks and explore your viewing taste. Free, and ready to use the moment you open it."
 
   accent: "#FFB300"
   accent_soft: "#FFD54F"
@@ -41,8 +47,8 @@
   price: Free
   platforms: "iOS · Android"
   chips:
-    - No account
-    - On device
+    - Movies &amp; TV
+    - Trailers
     - Free
 
   icon: /assets/apps/cineepp/icon.webp
@@ -56,7 +62,7 @@
     - title: Trailers
       body: "Flip vertically through a never-ending feed of trending movie and TV trailers, playing right inside the app."
     - title: Saved
-      body: "Bookmark what you want to watch, mark what you've already seen, and check off episodes as you go. Everything stays on your device — no account, no sync required."
+      body: "Bookmark what you want to watch, mark what you've already seen, and check off episodes as you go. Your watchlist is there the moment you open the app."
     - title: My Activity
       body: "See what to watch next, your viewing stats, your taste by genre and decade, and a calendar of everything you've watched. The more you mark as watched, the sharper your recommendations get."
 
@@ -72,7 +78,7 @@
     - file: 05-trailers.webp
       alt: "Vertical feed of trending trailers"
     - file: 06-save.webp
-      alt: "Watchlist saved on your device"
+      alt: "Your watchlist of films and shows to come back to"
     - file: 07-activity.webp
       alt: "Viewing stats and taste analysis"
 
@@ -152,8 +158,8 @@
 - slug: drawwii
   name: Drawwii
   tagline: "Background eraser & templates"
-  summary: "Draw with pressure brushes. Remove photo backgrounds and objects — on-device AI."
-  lead: "Drawwii turns your phone into a full creative studio — draw freely, edit photos with on-device AI, and turn ideas into finished designs, all in one app."
+  summary: "Draw with pressure brushes, erase objects, and cut out backgrounds — AI that runs on the phone."
+  lead: "Drawwii turns your phone into a full creative studio — draw freely, edit photos with AI that runs on the device, and turn ideas into finished designs, all in one app."
 
   accent: "#DF64A3"
   accent_soft: "#F191C4"
@@ -170,8 +176,8 @@
   price: Free
   platforms: "iOS · Android"
   chips:
-    - No account
-    - On-device AI
+    - Drawing
+    - AI photo editing
     - Free
 
   icon: /assets/apps/drawwii/icon.webp
@@ -180,8 +186,8 @@
   features:
     - title: Draw freely
       body: "8 pressure-sensitive brushes — pen, highlighter, calligraphy, neon, spray, marker, pencil and eraser. 10 shapes with gradient fill, selection and transform tools, unlimited layers with blend modes, symmetry mode and a pinch-to-zoom canvas."
-    - title: Edit photos — privately, on your device
-      body: "Magic Eraser removes unwanted objects with AI inpainting. Background Remover cuts out the subject and swaps in a color, gradient, photo or blur. All AI processing happens on your device — your photos are never uploaded to a server."
+    - title: Edit photos right on the phone
+      body: "Magic Eraser removes unwanted objects with AI inpainting. Background Remover cuts out the subject and swaps in a color, gradient, photo or blur. The models run on the device, so editing works without a connection and there is nothing to wait for."
     - title: Collage &amp; templates
       body: "Combine photos with grid or freeform collage layouts, or start from 290+ ready-made templates across 20+ categories — invitations, planners, checklists and celebrations — then keep editing right in the drawing editor."
     - title: Stickers &amp; photo elements
@@ -195,9 +201,9 @@
     - file: 01-draw.webp
       alt: "Draw freely with 8 pressure-sensitive brushes"
     - file: 02-eraser_before_after.webp
-      alt: "Magic Eraser: erase anything with on-device AI"
+      alt: "Magic Eraser removes unwanted objects from a photo"
     - file: 03-bg_remove.webp
-      alt: "Remove backgrounds instantly — no upload needed"
+      alt: "Cut out the subject and swap the background"
     - file: 04-templates.webp
       alt: "290+ templates across 20+ categories"
     - file: 05-stickers.webp
@@ -229,8 +235,8 @@
   price: Free
   platforms: "iOS · Android"
   chips:
-    - No account
-    - Works offline
+    - Music
+    - Synced lyrics
     - Free
 
   icon: /assets/apps/unrearix/icon.webp
@@ -246,8 +252,8 @@
       body: "Like your favorites, build and reorder your own playlists, and save the videos you want to return to. Turn any lyric into a shareable card or a phone wallpaper with the built-in makers."
     - title: Your lounge
       body: "Check in daily to build your streak, climb fan-pass tiers, and earn badges. Take lyric quizzes, vote in polls, and open your personal listening Recap — your most-played tracks in a share-ready story card."
-    - title: No login. Fully yours.
-      body: "No account, no sign-up. Your likes, playlists, streaks and history stay on your device — and the core experience works completely offline. Release countdowns, reminders and home-screen widgets keep the next moment one glance away."
+    - title: Stay close
+      body: "The core experience works offline, so the music is there on a plane or underground. Release countdowns, reminders and home-screen widgets keep the next moment one glance away."
 
   screenshots:
     - file: 01-player.webp
