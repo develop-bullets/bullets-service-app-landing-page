@@ -1,0 +1,33 @@
+{%- comment -%}
+  One app card on the home grid. The accent is injected inline rather than
+  through Sass so it stays scoped to this card — the header and footer around
+  it stay neutral.
+  Usage: {% include app-card.html app=app %}
+{%- endcomment -%}
+<article class="app-card app-card--{{ include.app.surface }}"
+         style="--app-accent:{{ include.app.accent }};--app-accent-soft:{{ include.app.accent_soft }};--app-ink:{{ include.app.accent_ink }};">
+  <img class="app-card__icon" src="{{ include.app.icon }}"
+       alt="{{ include.app.name }} app icon" width="76" height="76" loading="lazy">
+
+  <div class="app-card__name">
+    <h2>
+      <a class="app-card__link" href="{{ include.app.slug | prepend: '/' | append: '/' | relative_url }}">
+        {{ include.app.name }}
+      </a>
+    </h2>
+    <span class="app-card__tagline">{{ include.app.tagline }}</span>
+  </div>
+
+  <p class="app-card__summary">{{ include.app.summary }}</p>
+
+  <ul class="app-card__chips">
+    {%- for chip in include.app.chips %}
+    <li class="chip">{{ chip }}</li>
+    {%- endfor %}
+  </ul>
+
+  <div class="app-card__foot">
+    {% include store-badges.html app=include.app %}
+    <span class="app-card__more">Learn more &rarr;</span>
+  </div>
+</article>

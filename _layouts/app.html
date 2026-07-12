@@ -1,0 +1,114 @@
+{%- assign app = site.data.apps | where: "slug", page.app | first -%}
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+{% include head.html %}
+<body>
+  {% include header.html %}
+
+  {%- comment -%}
+    The accent is scoped to <main>, not <html>, so the header and footer stay
+    neutral while everything about the app is tinted with its brand colour.
+  {%- endcomment -%}
+  <main style="--app-accent:{{ app.accent }};--app-accent-soft:{{ app.accent_soft }};--app-ink:{{ app.accent_ink }};">
+    <section class="app-hero">
+      <div class="container app-hero__inner">
+        <img class="app-hero__icon" src="{{ app.icon }}"
+             alt="{{ app.name }} app icon" width="104" height="104">
+        <div class="app-hero__body">
+          <h1>{{ app.name }}</h1>
+          <p class="app-hero__tagline">{{ app.tagline }}</p>
+          <p class="app-hero__lead">{{ app.lead }}</p>
+
+          <ul class="app-hero__chips">
+            <li class="chip chip--accent">{{ app.price }}</li>
+            <li class="chip">{{ app.platforms }}</li>
+            {%- for chip in app.chips %}
+            {%- unless chip == "Free" %}
+            <li class="chip">{{ chip }}</li>
+            {%- endunless %}
+            {%- endfor %}
+          </ul>
+
+          {% include store-badges.html app=app %}
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        {%- comment -%}
+          The store screenshots already carry their own headline copy, brand
+          background and device frame, so they are shown as-is — no caption
+          overlay, no mockup. The alt text carries the caption for screen
+          readers.
+        {%- endcomment -%}
+        <div class="shot-rail">
+          {%- for shot in app.screenshots %}
+          <img class="shot" src="/assets/apps/{{ app.slug }}/{{ shot.file }}"
+               alt="{{ shot.alt }}" width="260" height="565" loading="lazy">
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="features">
+          {%- for feature in app.features %}
+          <div class="feature">
+            <h3>{{ feature.title }}</h3>
+            <p>{{ feature.body }}</p>
+          </div>
+          {%- endfor %}
+        </div>
+
+        <div class="app-links">
+          {%- if app.website %}
+          <a href="{{ app.website }}" target="_blank" rel="noopener noreferrer">Website</a>
+          {%- endif %}
+          {%- if app.privacy_url %}
+          <a href="{{ app.privacy_url }}" target="_blank" rel="noopener noreferrer">Privacy policy</a>
+          {%- endif %}
+          {%- if app.terms_url %}
+          <a href="{{ app.terms_url }}" target="_blank" rel="noopener noreferrer">Terms of service</a>
+          {%- endif %}
+          {%- for link in app.links %}
+          <a href="{{ link.href }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+          {%- endfor %}
+          <a href="mailto:{{ site.email }}">Support</a>
+        </div>
+
+        {%- for attribution in app.attributions %}
+        <p class="attribution">
+          {%- if attribution.logo %}
+          <a href="{{ attribution.href }}" target="_blank" rel="noopener noreferrer">
+            <img src="{{ attribution.logo }}" alt="{{ attribution.logo_alt }}" height="14">
+          </a>
+          {%- endif %}
+          <span>{{ attribution.text }}</span>
+        </p>
+        {%- endfor %}
+
+        <a class="back-link" href="{{ '/#apps' | relative_url }}">&larr; All apps</a>
+      </div>
+    </section>
+  </main>
+
+  {% include footer.html %}
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": {{ app.name | jsonify }},
+    "description": {{ page.description | jsonify }},
+    "url": {{ page.url | absolute_url | jsonify }},
+    "image": {{ app.icon | absolute_url | jsonify }},
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "MobileApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Bullets", "url": {{ site.url | jsonify }} }
+  }
+  </script>
+</body>
+</html>

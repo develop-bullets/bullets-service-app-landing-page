@@ -1,0 +1,31 @@
+:root {
+  // #131416 is the fill of the squircle in the Bullets logo. Matching it means
+  // the logo's plate dissolves into the page and only the white mark reads.
+  --bg: #131416;
+  --surface: #1b1c20;
+  --surface-2: #232429;
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.16);
+
+  --text: #f4f4f5;
+  --muted: #a1a1aa;
+  --faint: #71717a;
+
+  // Overridden per app via an inline style on the card / detail page, so the
+  // header and footer stay neutral. Defaults are the neutral fallback.
+  --app-accent: #f4f4f5;
+  --app-accent-soft: #a1a1aa;
+  --app-ink: #131416;
+
+  --radius: 18px;
+  --radius-sm: 10px;
+  --gutter: 24px;
+  --max: 1120px;
+
+  // Cineepp and Pilmie are near-identical ambers, so Pilmie's card uses a paper
+  // surface instead of a different colour. See _components.scss.
+  --paper: #fbf3e8;
+  --paper-ink: #3a2e24;
+  --paper-muted: #7a6a5c;
+  --paper-line: rgba(58, 46, 36, 0.14);
+}

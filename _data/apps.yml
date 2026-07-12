@@ -1,0 +1,269 @@
+# Single source of truth for the four Bullets apps.
+# The home page grid (_layouts/home.html) and every app detail page
+# (_layouts/app.html) read from this file. Look it up by slug:
+#   {% assign app = site.data.apps | where: "slug", page.app | first %}
+#
+# COPY ORIGIN — do not invent marketing copy; it comes from each app's store listing:
+#   cineepp  : bullets/cineepp/docs/store-listing.md                (## 🇺🇸 English)
+#   pilmie   : bullets/pilmie/docs/store-listing.md                 (## 1-1. English)
+#   drawwii  : bullets/drawwii/docs/store-listing-copy-2026-07-02.md (## 1. English)
+#   unrearix : bullets/unrearix/docs/store-listing.md               (### 1-EN. English)
+#
+# ⚠ `title` / `description` / `image` are duplicated in each _pages/<slug>.md front
+#   matter because jekyll-seo-tag cannot read data files. Change copy in both places.
+#
+# ⚠ COMPLIANCE — these are not style preferences:
+#   cineepp  : the TMDB attribution below is required by the TMDB API terms.
+#   unrearix : only 5 of 48 songs are bundled for in-app playback. Never imply
+#              unlimited or full streaming (App Store Guideline 4.2.2).
+#   pilmie   : requires social sign-in. Never give it a "No account" chip.
+#   drawwii  : say "290+" templates (293 internally) and keep the on-device /
+#              never-uploaded promise explicit.
+
+- slug: cineepp
+  name: Cineepp
+  tagline: "Watchlist & smart taste picks"
+  summary: "Browse movies and TV, swipe trending trailers, build a watchlist, and get taste-based picks."
+  lead: "Cineepp is your all-in-one home for movies and TV — discover what to watch, swipe through trending trailers, save your picks and explore your viewing taste. No account, no sign-up, completely free."
+
+  accent: "#FFB300"
+  accent_soft: "#FFD54F"
+  accent_ink: "#1A1205"
+  surface: dark
+
+  ios_id: "6753153863"
+  appstore_url: "https://apps.apple.com/app/id6753153863"
+  play_url: "https://play.google.com/store/apps/details?id=kr.co.bullets.cineepp"
+  website: "https://cineepp.com"
+  privacy_url: "https://cineepp.com/privacy/"
+  terms_url: "https://cineepp.com/terms/"
+
+  price: Free
+  platforms: "iOS · Android"
+  chips:
+    - No account
+    - On device
+    - Free
+
+  icon: /assets/apps/cineepp/icon.webp
+  og_image: /assets/brand/og-default.png
+
+  features:
+    - title: Movies
+      body: "Browse trending, in theaters, top rated and all-time favorites. Narrow down by genre, streaming service, release year, runtime, language and rating, then go deep on cast &amp; crew, reviews, recommendations and collections."
+    - title: TV
+      body: "See seasons and episodes at a glance, compare how each season was rated, and check upcoming air dates and where to watch. Discover K-dramas and Korean variety shows."
+    - title: Trailers
+      body: "Flip vertically through a never-ending feed of trending movie and TV trailers, playing right inside the app."
+    - title: Saved
+      body: "Bookmark what you want to watch, mark what you've already seen, and check off episodes as you go. Everything stays on your device — no account, no sync required."
+    - title: My Activity
+      body: "See what to watch next, your viewing stats, your taste by genre and decade, and a calendar of everything you've watched. The more you mark as watched, the sharper your recommendations get."
+
+  screenshots:
+    - file: 01-korean.webp
+      alt: "Korean wave — K-dramas, K-movies and variety shows"
+    - file: 02-discover.webp
+      alt: "Discover trending movies and TV in one place"
+    - file: 03-movie.webp
+      alt: "Movie detail with cast, ratings and reviews"
+    - file: 04-series.webp
+      alt: "Series detail with seasons and per-season ratings"
+    - file: 05-trailers.webp
+      alt: "Vertical feed of trending trailers"
+    - file: 06-save.webp
+      alt: "Watchlist saved on your device"
+    - file: 07-activity.webp
+      alt: "Viewing stats and taste analysis"
+
+  attributions:
+    - text: "This product uses the TMDB API but is not endorsed or certified by TMDB."
+      logo: /assets/apps/cineepp/tmdb.png
+      logo_alt: TMDB
+      href: "https://www.themoviedb.org/"
+
+# ---------------------------------------------------------------------------
+
+- slug: pilmie
+  name: Pilmie
+  tagline: "Track reading & share reviews"
+  summary: "Log your reading, build streaks, and share book reviews with fellow readers."
+  lead: "Pilmie is a cozy home for everything you read. Search for any book, keep a personal reading log, and share honest reviews with a community of readers who love books as much as you do."
+
+  accent: "#F4AA2B"
+  accent_soft: "#FFC978"
+  accent_ink: "#3A2E24"
+  surface: paper
+
+  ios_id: "6749807731"
+  appstore_url: "https://apps.apple.com/app/id6749807731"
+  play_url: "https://play.google.com/store/apps/details?id=kr.co.bullets.pilmie"
+  website: "https://pilmie.com"
+  privacy_url: "https://pilmie.com/privacy/"
+  terms_url: "https://pilmie.com/terms/"
+
+  price: Free
+  platforms: "iOS · Android"
+  # No "No account" chip — Pilmie requires social sign-in.
+  chips:
+    - Community
+    - Free
+
+  icon: /assets/apps/pilmie/icon.webp
+  og_image: /assets/brand/og-default.png
+
+  features:
+    - title: Build a reading habit
+      body: "Check in every day and watch your reading streak grow. Set an annual goal and track every book you finish."
+    - title: Your personal library
+      body: "Sort every book into Want to read, Reading, and Read, and pick up right where you left off."
+    - title: Write &amp; discover reviews
+      body: "Rate books, write reviews, and browse thoughtful takes from other readers. Sort by latest or most loved."
+    - title: Save the lines that stay with you
+      body: "Highlight your favorite sentences, revisit them anytime, and share them as beautiful cards."
+    - title: Find your next read
+      body: "A fresh \"Today's book,\" mood-based collections — a light read for the commute, something comforting when you're worn out, a poem before sleep — and the books people are reading right now."
+    - title: Follow readers you trust
+      body: "Follow reviewers whose taste you love, and their new reviews gather on your home. Like and comment to keep the conversation going."
+    - title: Look back on your year
+      body: "Turn your year of reading into a shareable card."
+
+  screenshots:
+    - file: 01-home.webp
+      alt: "Home feed of reviews from readers you follow"
+    - file: 02-shelf.webp
+      alt: "Your shelf — want to read, reading, and read"
+    - file: 03-profile.webp
+      alt: "Reading profile with streak and annual goal"
+    - file: 04-review_detail.webp
+      alt: "A book review with likes and comments"
+    - file: 05-book_detail.webp
+      alt: "Book detail with ratings and reviews"
+
+  attributions:
+    - text: "Book data provided by the Naver Book Search API. Titles shown are from Korean sources."
+
+# ---------------------------------------------------------------------------
+
+- slug: drawwii
+  name: Drawwii
+  tagline: "Background eraser & templates"
+  summary: "Draw with pressure brushes. Remove photo backgrounds and objects — on-device AI."
+  lead: "Drawwii turns your phone into a full creative studio — draw freely, edit photos with on-device AI, and turn ideas into finished designs, all in one app."
+
+  accent: "#DF64A3"
+  accent_soft: "#F191C4"
+  accent_ink: "#2A0C1C"
+  surface: dark
+
+  ios_id: "6751758802"
+  appstore_url: "https://apps.apple.com/app/id6751758802"
+  play_url: "https://play.google.com/store/apps/details?id=kr.co.bullets.drawwii"
+  website: "https://drawwii.com"
+  privacy_url: "https://drawwii.com/privacy/"
+  terms_url: "https://drawwii.com/terms/"
+
+  price: Free
+  platforms: "iOS · Android"
+  chips:
+    - No account
+    - On-device AI
+    - Free
+
+  icon: /assets/apps/drawwii/icon.webp
+  og_image: /assets/brand/og-default.png
+
+  features:
+    - title: Draw freely
+      body: "8 pressure-sensitive brushes — pen, highlighter, calligraphy, neon, spray, marker, pencil and eraser. 10 shapes with gradient fill, selection and transform tools, unlimited layers with blend modes, symmetry mode and a pinch-to-zoom canvas."
+    - title: Edit photos — privately, on your device
+      body: "Magic Eraser removes unwanted objects with AI inpainting. Background Remover cuts out the subject and swaps in a color, gradient, photo or blur. All AI processing happens on your device — your photos are never uploaded to a server."
+    - title: Collage &amp; templates
+      body: "Combine photos with grid or freeform collage layouts, or start from 290+ ready-made templates across 20+ categories — invitations, planners, checklists and celebrations — then keep editing right in the drawing editor."
+    - title: Stickers &amp; photo elements
+      body: "Add emoji stickers or cut-out photos as movable layers. Draw directly on top of a photo, or overlay a reference image while you sketch."
+    - title: More tools, one tap away
+      body: "Filters, watermarks, borders and frames, social resize presets, batch background removal, an image compressor, image-to-PDF, a document scanner, a QR code generator, a GIF maker and photo stitching."
+    - title: Build a drawing habit
+      body: "Track your daily drawing streak, see your activity heatmap, and take on weekly challenges. Your gallery stays organized with search, tags, favorites, trash with undo, and full backup &amp; restore."
+
+  screenshots:
+    - file: 01-draw.webp
+      alt: "Draw freely with 8 pressure-sensitive brushes"
+    - file: 02-eraser_before_after.webp
+      alt: "Magic Eraser: erase anything with on-device AI"
+    - file: 03-bg_remove.webp
+      alt: "Remove backgrounds instantly — no upload needed"
+    - file: 04-templates.webp
+      alt: "290+ templates across 20+ categories"
+    - file: 05-stickers.webp
+      alt: "Add stickers and photo cutouts to your art"
+    - file: 06-habit.webp
+      alt: "Build a daily drawing habit"
+    - file: 07-gallery.webp
+      alt: "Your gallery, organized your way"
+
+# ---------------------------------------------------------------------------
+
+- slug: unrearix
+  name: Unrearix
+  tagline: "Songs, videos & synced lyrics"
+  summary: "The official Unrearix app — play songs, watch videos, and follow every lyric."
+  lead: "Unrearix is a creative music team under one artist brand, moving freely across genres, styles and voices to shape a boundary-free sound. This is the official Unrearix app: an immersive home for every song, video and moment from the team."
+
+  accent: "#FF2DA8"
+  accent_soft: "#FF6AC4"
+  accent_ink: "#14000B"
+  surface: dark
+
+  ios_id: "6752011330"
+  appstore_url: "https://apps.apple.com/app/id6752011330"
+  play_url: "https://play.google.com/store/apps/details?id=kr.co.bullets.unrearix"
+  website: "https://unrearix.com/"
+  privacy_url: "https://unrearix.com/privacy"
+
+  price: Free
+  platforms: "iOS · Android"
+  chips:
+    - No account
+    - Works offline
+    - Free
+
+  icon: /assets/apps/unrearix/icon.webp
+  og_image: /assets/brand/og-default.png
+
+  features:
+    # ⚠ 4.2.2: "browse the discography and play in the app" — never "stream everything".
+    - title: Play, right here
+      body: "Browse the full Unrearix discography and play in the app, with background and lock-screen controls, a persistent mini-player, and a full-screen player tinted by each cover's colors. Follow every word with time-synced lyrics that scroll as the song plays."
+    - title: Watch
+      body: "Dive into the full video collection — releases, live moments and mixes — plus curated playlists that set the mood."
+    - title: Your library
+      body: "Like your favorites, build and reorder your own playlists, and save the videos you want to return to. Turn any lyric into a shareable card or a phone wallpaper with the built-in makers."
+    - title: Your lounge
+      body: "Check in daily to build your streak, climb fan-pass tiers, and earn badges. Take lyric quizzes, vote in polls, and open your personal listening Recap — your most-played tracks in a share-ready story card."
+    - title: No login. Fully yours.
+      body: "No account, no sign-up. Your likes, playlists, streaks and history stay on your device — and the core experience works completely offline. Release countdowns, reminders and home-screen widgets keep the next moment one glance away."
+
+  screenshots:
+    - file: 01-player.webp
+      alt: "Full-screen player with time-synced lyrics"
+    - file: 02-music.webp
+      alt: "Browse the full Unrearix discography"
+    - file: 03-artist.webp
+      alt: "The artist page — boundary-free sound"
+    - file: 04-videos.webp
+      alt: "Every music video and live moment"
+    - file: 05-create.webp
+      alt: "Turn a lyric into a card or wallpaper"
+    - file: 06-lounge.webp
+      alt: "Daily check-in, fan pass and badges"
+
+  links:
+    - label: YouTube
+      href: "https://www.youtube.com/@unrearix"
+    - label: Instagram
+      href: "https://instagram.com/unrearix.official"
+
+  attributions:
+    - text: "Made by Bullets."

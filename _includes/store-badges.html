@@ -1,0 +1,17 @@
+{%- comment -%}
+  Store badges for one app. Each URL is guarded: an app that is not on a store
+  yet simply has no badge for it, rather than a link that 404s.
+  Usage: {% include store-badges.html app=app %}
+{%- endcomment -%}
+<div class="store-badges">
+  {%- if include.app.appstore_url %}
+  <a href="{{ include.app.appstore_url }}" target="_blank" rel="noopener noreferrer">
+    <img src="/assets/appstore.png" alt="Download {{ include.app.name }} on the App Store" height="40">
+  </a>
+  {%- endif %}
+  {%- if include.app.play_url %}
+  <a href="{{ include.app.play_url }}" target="_blank" rel="noopener noreferrer">
+    <img src="/assets/playstore.png" alt="Get {{ include.app.name }} on Google Play" height="40">
+  </a>
+  {%- endif %}
+</div>
