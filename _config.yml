@@ -8,7 +8,6 @@ url: "https://bullets.co.kr"
 lang: en
 
 email: develop@bullets.co.kr
-github_org: develop-bullets
 logo: /assets/brand/og-default.png
 
 # jekyll-seo-tag and jekyll-sitemap ship inside the github-pages gem, so GitHub
@@ -16,11 +15,6 @@ logo: /assets/brand/og-default.png
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-
-social:
-  name: Bullets
-  links:
-    - https://github.com/develop-bullets
 
 defaults:
   - scope:

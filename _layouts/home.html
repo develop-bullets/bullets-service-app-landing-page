@@ -88,8 +88,6 @@
         </div>
         <div class="contact-links">
           <a class="button" href="mailto:{{ site.email }}">{{ site.email }}</a>
-          <a class="button" href="https://github.com/{{ site.github_org }}"
-             target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
     </section>
@@ -105,8 +103,7 @@
     "url": {{ site.url | jsonify }},
     "logo": {{ "/assets/brand/logo.png" | absolute_url | jsonify }},
     "email": {{ site.email | jsonify }},
-    "description": {{ site.description | strip_newlines | strip | jsonify }},
-    "sameAs": ["https://github.com/{{ site.github_org }}"]
+    "description": {{ site.description | strip_newlines | strip | jsonify }}
   }
   </script>
 </body>
