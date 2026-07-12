@@ -27,6 +27,15 @@
   max-width: 44rem;
 }
 
+/* The logo squircle is the same colour as the page, so on the dark hero the
+   plate dissolves and only the white mark reads. */
+.hero__logo {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 24px;
+  border-radius: 20px;
+}
+
 .hero p {
   margin-top: 18px;
   color: var(--muted);
